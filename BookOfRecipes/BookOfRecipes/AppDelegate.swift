@@ -15,7 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+//		window = UIWindow()
+//		window?.makeKeyAndVisible()
+//
+//		let layout = UICollectionViewFlowLayout()
+//		let featuredAppsController = FirstViewController(collectionViewLayout: layout)
+//		window?.rootViewController = featuredAppsController
 		return true
 	}
 
