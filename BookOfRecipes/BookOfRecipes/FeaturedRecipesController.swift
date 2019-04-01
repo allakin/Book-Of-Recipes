@@ -1,35 +1,33 @@
 //
-//  FirstViewController.swift
+//  FeaturedRecipesController.swift
 //  BookOfRecipes
 //
-//  Created by Pavel on 03/02/2019.
+//  Created by Pavel Anpleenko on 26/03/2019.
 //  Copyright © 2019 Pavel. All rights reserved.
 //
 
 import UIKit
 
-class FirstViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class FeaturedRecipesController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 	
-	private let cellId = "cell"
+	private let cellId = "cellId"
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-//		collectionView.backgroundColor = .red
-		collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
+		collectionView.backgroundColor = UIColor.white
+		collectionView.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
 	}
 	
 	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		return 5
+		return 3
 	}
 	
 	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
-		return cell
+		return collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		return CGSize(width: view.frame.height, height: 290)
+		return CGSize(width: view.frame.width, height: 200)
 	}
+	
 }
-
-
